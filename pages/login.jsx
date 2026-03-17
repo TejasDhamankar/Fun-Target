@@ -59,20 +59,17 @@ function login() {
   };
 
   return (
-    <body className="w-screen h-screen bg-black relative">
+    <div className="min-h-screen bg-black relative">
       <img
         src="/loginbg.jpg"
-        className="absolute opacity-50  w-full h-full object-fill"
+        className="absolute inset-0 opacity-50 w-full h-full object-cover"
       />
 
-
-
-      <div className="flex justify-around absolute">
-
-        <div className="">
-          <div className=" w-full">
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-8 px-4 py-6">
+        <div className="w-full max-w-sm">
+          <div className="w-full">
             <form
-              className="bg-[#030305] border border-amber-400 rounded-lg  shadow-md  p-2 px-8 w-[100%] h-[100%] "
+              className="bg-[#030305] border border-amber-400 rounded-lg shadow-md p-4"
               onSubmit={handleSubmit}
             >
               <div className="pt-4 flex ">
@@ -125,7 +122,7 @@ function login() {
                 </label>
 
               </div>
-              <div className="flex bg-[#030305] items-center justify-between w-1/2 ml-auto">
+              <div className="flex bg-[#030305] items-center justify-between w-full">
                 <button
                   className="bg-gradient-to-b from-neutral-400 to-amber-300 hover:bg-red-700 w-full  text-black   border border-white font-bold py-3  text-2xl px-2 rounded-lg focus:outline-none focus:shadow-outline"
                   type="submit"
@@ -137,10 +134,9 @@ function login() {
           </div>
           
         </div>
-        <img src="/fungame.png" className="h-64 mt-24 ml-24" />
-
+        <img src="/fungame.png" className="w-64 md:w-80 lg:w-96" />
       </div>
-    </body>
+    </div>
   );
 }
 

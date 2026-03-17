@@ -32,7 +32,7 @@ function register() {
 
     }
     return (
-        <body className=' overflow-y-hidden'>
+        <div className=' overflow-y-hidden'>
             <div className='flex'>
             <img src='/back.png' />
             <Link href='/admin'>
@@ -70,7 +70,7 @@ function register() {
                 <Modal isOpen={showModal} onClose={() => setShowModal(false)}  />
                
             </div>
-        </body>
+        </div>
     )
 }
 

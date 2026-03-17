@@ -17,6 +17,7 @@ export default async (req, res) => {
 const register = async (req, res) => {
     try {
         const { userName, password, role } = req.body
+        const safeRole = role || 'user'
 
         const passwordHash = await bcrypt.hash(password, 12)
 
@@ -24,7 +25,7 @@ const register = async (req, res) => {
         if (user) return res.status(400).json({ err: 'You are already registerd!' })
 
         const newUser = new Users(
-            { userName, password: passwordHash, role })
+            { userName, password: passwordHash, role: safeRole })
 
         console.log(newUser)
         await newUser.save()

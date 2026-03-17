@@ -1,4 +1,5 @@
-const baseUrl = process.env.BASE_URL
+// Prefer a public base URL in the browser; fall back to localhost for local dev.
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:9223'
 
 export const getData = async (url, token) =>{
     const res = await fetch(`${baseUrl}/api/${url}`, {

@@ -58,16 +58,16 @@ function login() {
     setChecked(!isChecked);
   };
   return (
-    <body className="  relative">
-      {/* <img
+    <div className="min-h-screen bg-black relative">
+      <img
         src="/loginbg.jpg"
-        className="absolute opacity-50  w-full  object-fill"
-      /> */}
-      <div className="flex justify-around bg-black ">
+        className="absolute inset-0 opacity-50 w-full h-full object-cover"
+      />
+      <div className="relative z-10 flex flex-col items-center justify-center gap-8 px-4 py-6">
         <div className="">
-          <div className=" w-full">
+          <div className="w-full max-w-sm">
             <form
-              clssName="bg-[#030305] border border-amber-400 rounded-lg  shadow-md  p-2 px-8 w-[100%] h-[100%] "
+              className="bg-[#030305] border border-amber-400 rounded-lg shadow-md p-4 w-full"
               onSubmit={handleSubmit}
             >
               <h1 className="text-white font-fun text-center">SubAdmin Login</h1>
@@ -121,7 +121,7 @@ function login() {
                 </label>
 
               </div>
-              <div className="flex bg-[#030305] items-center justify-between w-1/2 ml-auto">
+              <div className="flex bg-[#030305] items-center justify-between w-full">
                 <button
                   className="bg-gradient-to-b from-neutral-400 to-amber-300 hover:bg-red-700 w-full  text-black   border border-white font-bold py-3  text-2xl px-2 rounded-lg focus:outline-none focus:shadow-outline"
                   type="submit"
@@ -136,7 +136,7 @@ function login() {
 
 
       </div>
-    </body>
+    </div>
   );
 }
 

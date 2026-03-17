@@ -8,6 +8,33 @@ body{
    
     background-position: 2%;
 }
+/* Center a "mobile-sized" app surface on larger screens */
+.app-frame{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.app-shell{
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+@media (min-width: 768px){
+  .app-shell{
+    padding: 16px 0;
+  }
+}
+@media (min-width: 1024px){
+  .app-shell{
+    max-width: 560px;
+  }
+}
+/* Allow full-width pages when explicitly opted out */
+.no-global-styles .app-shell{
+  max-width: none;
+  width: 100%;
+  padding: 0;
+}
 
 
 body{

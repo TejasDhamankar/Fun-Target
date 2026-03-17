@@ -24,7 +24,7 @@ function register() {
 
     }
     return (
-        <body className=''>
+        <div className=''>
             <HeaderText />
             <div className='flex'>
             <img src='/back.png' />
@@ -59,7 +59,7 @@ function register() {
                     &copy;Chakri - Deltin Royale Games
                 </p>
             </div>
-        </body>
+        </div>
     )
 }
 
