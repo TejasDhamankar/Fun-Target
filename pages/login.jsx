@@ -65,76 +65,76 @@ function login() {
         className="absolute inset-0 opacity-50 w-full h-full object-cover"
       />
 
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-8 px-4 py-6">
-        <div className="w-full max-w-sm">
-          <div className="w-full">
-            <form
-              className="bg-[#030305] border border-amber-400 rounded-lg shadow-md p-4"
-              onSubmit={handleSubmit}
-            >
-              <div className="pt-4 flex ">
-                <label
-                  className=" text-white mt-auto font-medium pb-4  px-2 text-lg "
-                  htmlFor="username"
-                >
-                  Username
-                </label>
-                <input
-                  className="shadow appearance-none  rounded w-full text-2xl mt-auto p-1 bg-white text-black  leading-tight focus:outline-none focus:shadow-outline"
-                  id="username"
-                  name="userName"
-                  value={userName}
-                  onChange={handleChangeInput}
-                  type="text"
-                  placeholder="FUN"
-                />
-              </div>
-              <div className="py-4 flex bg-[#030305]">
-                <label
-                  className=" text-white mt-auto font-medium pb-4  px-2 text-lg "
-                  htmlFor="username"
-                >
-                  Password
-                </label>
-                <input
-                  className="shadow appearance-none  rounded w-full text-2xl mt-auto p-1 bg-white text-black  leading-tight focus:outline-none focus:shadow-outline"
-                  id="password"
-                  type="password"
-                  name="password"
-                  value={password}
-                  onChange={handleChangeInput}
-                  placeholder="******"
-                />
-              </div>
-              <div className="py-4 flex text-black bg-[#030305]">
-                <input
-                  className="form-checkbox h-6 w-6 text-gray-600"
-                  type="checkbox"
-                  checked={isChecked}
-                  onChange={handleCheckboxChange}
-                  name="checkbox"
-                />
-                <label
-                  className=" text-white  text-lg px-2 -mt-2 font-medium  py-2"
-                  htmlFor="password"
-                >
-                  Remember Me
-                </label>
-
-              </div>
-              <div className="flex bg-[#030305] items-center justify-between w-full">
-                <button
-                  className="bg-gradient-to-b from-neutral-400 to-amber-300 hover:bg-red-700 w-full  text-black   border border-white font-bold py-3  text-2xl px-2 rounded-lg focus:outline-none focus:shadow-outline"
-                  type="submit"
-                >
-                  Login
-                </button>
-              </div>
-            </form>
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-4 py-6">
+        <div className="flex flex-col items-center gap-4">
+          <img src="/fungame.png" className="w-64 md:w-80 lg:w-96" />
+          <div className="w-full max-w-sm">
+            <div className="w-full">
+              <form
+                className="bg-[#030305] border border-amber-400 rounded-lg shadow-md p-4"
+                onSubmit={handleSubmit}
+              >
+                <div className="pt-4 flex ">
+                  <label
+                    className=" text-white mt-auto font-medium pb-4  px-2 text-lg "
+                    htmlFor="username"
+                  >
+                    Username
+                  </label>
+                  <input
+                    className="shadow appearance-none  rounded w-full text-2xl mt-auto p-1 bg-white text-black  leading-tight focus:outline-none focus:shadow-outline"
+                    id="username"
+                    name="userName"
+                    value={userName}
+                    onChange={handleChangeInput}
+                    type="text"
+                    placeholder="FUN"
+                  />
+                </div>
+                <div className="py-4 flex bg-[#030305]">
+                  <label
+                    className=" text-white mt-auto font-medium pb-4  px-2 text-lg "
+                    htmlFor="username"
+                  >
+                    Password
+                  </label>
+                  <input
+                    className="shadow appearance-none  rounded w-full text-2xl mt-auto p-1 bg-white text-black  leading-tight focus:outline-none focus:shadow-outline"
+                    id="password"
+                    type="password"
+                    name="password"
+                    value={password}
+                    onChange={handleChangeInput}
+                    placeholder="******"
+                  />
+                </div>
+                <div className="py-4 flex text-black bg-[#030305]">
+                  <input
+                    className="form-checkbox h-6 w-6 text-gray-600"
+                    type="checkbox"
+                    checked={isChecked}
+                    onChange={handleCheckboxChange}
+                    name="checkbox"
+                  />
+                  <label
+                    className=" text-white  text-lg px-2 -mt-2 font-medium  py-2"
+                    htmlFor="password"
+                  >
+                    Remember Me
+                  </label>
+                </div>
+                <div className="flex bg-[#030305] items-center justify-between w-full">
+                  <button
+                    className="bg-gradient-to-b from-neutral-400 to-amber-300 hover:bg-red-700 w-full  text-black   border border-white font-bold py-3  text-2xl px-2 rounded-lg focus:outline-none focus:shadow-outline"
+                    type="submit"
+                  >
+                    Login
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
-          
         </div>
-        <img src="/fungame.png" className="w-64 md:w-80 lg:w-96" />
       </div>
     </div>
   );
